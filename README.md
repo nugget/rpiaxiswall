@@ -25,6 +25,8 @@ camera streams on an RPi 3.
     18242 root      20   0  132964  18892  14272 S   1.0  2.5   0:09.24 omxplayer.bin
     18235 root      20   0  132716  19820  14352 S   0.7  2.6   0:08.89 omxplayer.bin
 
+[omxplayer]: (https://github.com/popcornmix/omxplayer)
+
 ## Requirements
 
 - Developed and tested on a Pi 3 Model B running Raspbian Jesse Lite (no X11)
@@ -58,6 +60,4 @@ camera streams on an RPi 3.
 
 - Here are some other arguments that *may* work with the AXIS stream:
   `resolution=160x120&compression=20&color=1&mirror=0&textcolor=white&textbackgroundcolor=black&textposition=top&text=0&clock=0&date=0&fps=0&audio=1&videokeyframeinterval=30&videobitrate=0&videocodec=h264`
-
-[omxplayer]: (https://github.com/popcornmix/omxplayer)
 
