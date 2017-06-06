@@ -1,7 +1,7 @@
 # Raspberry Pi Axis IP Camera Wall Display
 
 I wanted to set up some Raspberry Pi boxes to provide a passive video feed
-of the AXIS webcams I have set up at my house.  I hook these into unused
+of the [AXIS webcams] I have set up at my house.  I hook these into unused
 HDMI video inputs on my televisions and on a spare monitor to act as wall
 displays for viewing the cameras.
 
@@ -54,10 +54,12 @@ camera streams on an RPi 3.
 - The AXIS username and password are exposed in the proctable (visible via `ps`)
   so it's inappropriate to use this on a machine that's shared by untrusted 
   users.  There doesn't appear to be a way to avoid this with [omxplayer]
-  currently.
+  currently.  You could avoid it by enabling anonymous viewing on your
+  camerars, but that's a horrible idea.
 
 - Here are some other arguments that *may* work with the AXIS stream:
   `resolution=160x120&compression=20&color=1&mirror=0&textcolor=white&textbackgroundcolor=black&textposition=top&text=0&clock=0&date=0&fps=0&audio=1&videokeyframeinterval=30&videobitrate=0&videocodec=h264`
 
+[AXIS webcams]: https://www.axis.com/us/en/products/network-cameras
 [omxplayer]: https://github.com/popcornmix/omxplayer
 
