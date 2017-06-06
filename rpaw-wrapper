@@ -2,7 +2,7 @@
 
 while [ true ]
 do
-	exec omxplayer "$@"
+	omxplayer "$@"
 	logger -i rpaw "Camera feed exited with code $?"
 	sleep 10
 done
