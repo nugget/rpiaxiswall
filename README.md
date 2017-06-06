@@ -34,13 +34,14 @@ camera streams on an RPi 3.
 
 ## Installation
 
-- Copy the rpaw.conf.sample to rpaw.conf and edit to reflect your camera's
+- Copy `rpaw.conf.sample` to `rpaw.conf` and edit to reflect your camera's
   viewer credentials.  This code currently only works if it's the same 
   username and password for all the cameras.
 
-- Edit the `rpaw` bash script and add/remove/tweak the `rpaw-wrapper` calls
-  towards the bottom to reflect your cameras and desired window arrangement.
-  Yes, I realize this is lame and ugly, but it's ok for a version 0.1 release.
+- Also in `rpaw.conf` add one or more CAMERA0n lines for each of your 
+  AXIS cameras.  You'll have to sort out the `--win` and `--crop`
+  boundaries for yourself.  The sample config is for a quad display filling
+  the entire 1080p screen with four equally-sized camera streams.
 
 - Do a `sudo make install`
 
@@ -52,7 +53,6 @@ camera streams on an RPi 3.
   video won't make it to the framebuffer unless there's someone logged in.
   There may be a way to fix this in systemd, but I haven't figured it out
   yet.
-  
 
 ## Notes
 
