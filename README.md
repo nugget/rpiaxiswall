@@ -52,7 +52,11 @@ camera streams on an RPi 3.
 - Run `raspi-config` and set Boot Options to "Console Autologin".  The
   video won't make it to the framebuffer unless there's someone logged in.
   There may be a way to fix this in systemd, but I haven't figured it out
-  yet.
+  yet.  This does represent a vulnerability if anyone plugs a keyboard into
+  the device.  As a workaround, I did determine that it will still display
+  the video even if the pi user's shell is set to `/usr/sbin/nologin` which
+  is better than nothing.
+
 
 ## Notes
 
