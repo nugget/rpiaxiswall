@@ -17,6 +17,23 @@ the hassles of figuring it out themselves.
 - Tested with AXIS M3027, P1427-LE, and M2026-LE cameras.  Should work with
   any modern AXIS camera that can run firmware v5 or higher.
 
+## Installation
+
+- Copy the rpaw.conf.sample to rpaw.conf and edit to reflect your camera's
+  viewer credentials.  This code currently only works if it's the same 
+  username and password for all the cameras.
+
+- Edit the `rpaw` bash script and add/remove/tweak the `rpaw-wrapper` calls
+  towards the bottom to reflect your cameras and desired window arrangement.
+  Yes, I realize this is lame and ugly, but it's ok for a version 0.1 release.
+
+- Do a `sudo make install`
+
+- This will create a `systemd` service called `rpaw` which can be enabled or
+  disabled to taste.  It will respond to `start`, `stop`, and `status` 
+  commands via `systemctl` as you'd expect/hope.
+  
+
 ## Notes
 
 Here are some other arguments that *may* work with the AXIS stream:
