@@ -53,7 +53,7 @@ camera streams on an RPi 3.
 
 - The AXIS username and password are exposed in the proctable (visible via `ps`)
   so it's inappropriate to use this on a machine that's shared by untrusted 
-  users.  There doesn't appear to be a way to avoid this with `omxplayer`
+  users.  There doesn't appear to be a way to avoid this with [omxplayer]
   currently.
 
 - Here are some other arguments that *may* work with the AXIS stream:
