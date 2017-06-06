@@ -1,2 +1,10 @@
 USERNAME="luser"
 PASSWORD="hunter2"
+
+# This first rpaw is an M3027 camera and we specify camera=2 to pull the "Panorama" video stream instead of the raw stream
+CAMERA1="--win '0 0 960 540' --crop '0 30 1920 750' --live 'rtsp://$USERNAME:$PASSWORD@axis-01.example.org/axis-media/media.amp?videocodec=h264&camera=2&clock=0&date=0'"
+
+# The rest are normal AXIS streams 
+CAMERA2="--win '961 0 1920 540' --crop '0 0 800 575' --live 'rtsp://$USERNAME:$PASSWORD@axis-02.example.org/axis-media/media.amp?resolution=800x600&clock=0&date=0'"
+CAMERA3="--win '0 541 960 1080' --live 'rtsp://$USERNAME:$PASSWORD@axis-03.example.org/axis-media/media.amp?resolution=800x600&clock=0&date=0'"
+CAMERA4="--win '961 541 1920 1080' --live 'rtsp://$USERNAME:$PASSWORD@axis-04.example.org/axis-media/media.amp?resolution=800x600&clock=0&date=0'"

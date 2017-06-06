@@ -34,12 +34,13 @@ killprocs
 
 sleep 2
 
-logger -i rpaw "Launching Camera Feeds"
-
-# This first rpaw is an M3027 camera and we specify camera=2 to pull the "Panorama" video stream instead of the raw stream
-nohup /usr/sbin/rpaw-wrapper --win '0 0 960 540' --live "rtsp://$USERNAME:$PASSWORD@axis-01.example.org/axis-media/media.amp?videocodec=h264&camera=2" &
-
-# The rest are normal AXIS streams 
-nohup /usr/sbin/rpaw-wrapper --win '961 0 1920 540' --live "rtsp://$USERNAME:$PASSWORD@axis-02.example.org/axis-media/media.amp?resolution=800x600&clock=0&date=0" &
-nohup /usr/sbin/rpaw-wrapper --win '0 541 960 1080' --live "rtsp://$USERNAME:$PASSWORD@axis-03.example.org/axis-media/media.amp?resolution=800x600&clock=0&date=0" &
-nohup /usr/sbin/rpaw-wrapper --win '961 541 1920 1080' --live "rtsp://$USERNAME:$PASSWORD@axis-04.example.org/axis-media/media.amp?resolution=800x600&clock=0&date=0" &
+for i in {1..16}
+do
+	varname=CAMERA$i
+	params=${!varname}
+	if [ "$params" != "" ]
+	then
+		logger -i rpaw "Launching camera $i with $params"
+		eval nohup /usr/sbin/rpaw-wrapper $params &
+	fi
+done
