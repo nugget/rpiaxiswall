@@ -1,0 +1,10 @@
+[Unit]
+Description=Raspberry Pi AXIS Wall
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/rpaw
+ExecStop=/usr/sbin/rpaw stop
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+while [ true ]
+do
+	exec omxplayer "$@"
+	logger -i rpaw "Camera feed exited with code $?"
+	sleep 10
+done

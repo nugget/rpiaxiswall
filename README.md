@@ -16,3 +16,9 @@ the hassles of figuring it out themselves.
 - I allocated the max memory possible to the GPU using `raspi-config`
 - Tested with AXIS M3027, P1427-LE, and M2026-LE cameras.  Should work with
   any modern AXIS camera that can run firmware v5 or higher.
+
+## Notes
+
+Here are some other arguments that *may* work with the AXIS stream:
+
+    resolution=160x120&compression=20&color=1&mirror=0&textcolor=white&textbackgroundcolor=black&textposition=top&text=0&clock=0&date=0&fps=0&audio=1&videokeyframeinterval=30&videobitrate=0&videocodec=h264
