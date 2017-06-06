@@ -55,7 +55,7 @@ camera streams on an RPi 3.
   so it's inappropriate to use this on a machine that's shared by untrusted 
   users.  There doesn't appear to be a way to avoid this with [omxplayer]
   currently.  You could avoid it by enabling anonymous viewing on your
-  camerars, but that's a horrible idea.
+  cameras, but that's a horrible idea.
 
 - Here are some other arguments that *may* work with the AXIS stream:
   `resolution=160x120&compression=20&color=1&mirror=0&textcolor=white&textbackgroundcolor=black&textposition=top&text=0&clock=0&date=0&fps=0&audio=1&videokeyframeinterval=30&videobitrate=0&videocodec=h264`
