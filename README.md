@@ -47,6 +47,11 @@ camera streams on an RPi 3.
 - This will create a `systemd` service called `rpaw` which can be enabled or
   disabled to taste.  It will respond to `start`, `stop`, and `status` 
   commands via `systemctl` as you'd expect/hope.
+
+- Run `raspi-config` and set Boot Options to "Console Autologin".  The
+  video won't make it to the framebuffer unless there's someone logged in.
+  There may be a way to fix this in systemd, but I haven't figured it out
+  yet.
   
 
 ## Notes
