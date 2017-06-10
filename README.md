@@ -5,6 +5,8 @@ of the [AXIS webcams] I have set up at my house.  I hook these into unused
 HDMI video inputs on my televisions and on a spare monitor to act as wall
 displays for viewing the cameras.
 
+![Picture of a television](https://c1.staticflickr.com/5/4280/34821820960_6d01981beb_b.jpg)
+
 This is really bare-bones and probably doesn't warrant public code, but 
 none of this is well-documented and it took some experimenting to get it
 all working.  Perhaps someone else will find it useful and be able to avoid
